@@ -14,5 +14,12 @@ path = "src/fizzbuzz.rs"
 name = "main"
 path = "src/main.rs"
 
+[[bin]]
+name = "task1"
+path = "src/task1.rs"
+
+[[bin]]
+name = "task2"
+path = "src/task2.rs"
 
 [dependencies]
