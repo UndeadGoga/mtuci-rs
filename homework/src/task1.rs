@@ -11,7 +11,7 @@
  dark square is a picture feverishly turned--in search of what?
  It is the same with books. What do we seek through millions of pages?";
  
- 
+
  fn main() {
      find_term(SEARCH_TERM, QUOTE);
  }
@@ -19,16 +19,18 @@
  fn find_term(search_term: &str, quote: &str) -> String {
      
      let lines = quote.lines();
-
+ 
      for (line_number, line) in lines.enumerate() {
-        if line.contains(search_term) {
-            return format!("{}: {}", line_number + 1, line);
-        }
+         if line.contains(search_term) {
+             let formatted_line = line.trim();
+ 
+             return format!("{}: {}", line_number + 1, formatted_line);
+         }
      }
-
+ 
      "Слово не найдено".to_string()
  }
- 
+
  
  // ----> TESTS
  #[cfg(test)]
